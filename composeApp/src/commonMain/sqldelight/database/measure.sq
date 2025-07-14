@@ -1,0 +1,38 @@
+CREATE TABLE measureEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    body_measure TEXT NOT NULL,
+    value REAL NOT NULL,
+    timestamp INTEGER NOT NULL
+);
+
+getMeasure:
+SELECT *
+FROM measureEntity
+ORDER BY timestamp DESC;
+
+insertMeasureEntity:
+INSERT OR REPLACE
+INTO measureEntity(
+    body_measure,
+    value,
+    timestamp
+)
+VALUES(?, ?, ?);
+
+getLastUniqueMeasures:
+SELECT
+    m.id,
+    m.body_measure,
+    m.value,
+    m.timestamp
+FROM
+    measureEntity m
+INNER JOIN (
+    SELECT
+        body_measure AS sub_body_measure,
+        MAX(timestamp) AS sub_max_timestamp
+    FROM
+        measureEntity
+    GROUP BY
+        body_measure
+) subquery_alias ON m.body_measure = subquery_alias.sub_body_measure AND m.timestamp = subquery_alias.sub_max_timestamp;

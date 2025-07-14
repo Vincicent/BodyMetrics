@@ -1,0 +1,25 @@
+<resources>
+    <string name="body_measurements">Body Measurements</string>
+    <string name="body_indices">Body Indices</string>
+    <string name="body_calculated_indices">Body Calculated Indices</string>
+    <string name="neck_label">Neck</string>
+    <string name="shoulders_label">Shoulders</string>
+    <string name="chest_label">Chest</string>
+    <string name="upper_back_label">Upper Back</string>
+    <string name="arm_right_label">Arm Right</string>
+    <string name="arm_left_label">Arm Left</string>
+    <string name="forearm_right_label">Forearm Right</string>
+    <string name="forearm_left_label">Forearm Left</string>
+    <string name="waist_label">Waist</string>
+    <string name="glutes_label">Glutes</string>
+    <string name="leg_right_label">Leg Right</string>
+    <string name="leg_left_label">Leg Left</string>
+    <string name="calve_right_label">Calve Right</string>
+    <string name="calve_left_label">Calve Left</string>
+    <string name="body_weight_label">Body Weight</string>
+    <string name="body_height_label">Body Height</string>
+    <string name="body_fat_percentage_label">Body Fat Percentage</string>
+    <string name="body_water_percentage_label">Body Water Percentage</string>
+    <string name="body_muscle_percentage_label">Body Muscle Percentage</string>
+    <string name="body_mass_index_label">Body Mass Index</string>
+</resources>

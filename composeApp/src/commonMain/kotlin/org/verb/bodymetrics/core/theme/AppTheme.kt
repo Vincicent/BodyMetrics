@@ -7,12 +7,15 @@ import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.verb.bodymetrics.R
+import bodymetrics.composeapp.generated.resources.Res
+import bodymetrics.composeapp.generated.resources.sf_pro_text_bold
+import bodymetrics.composeapp.generated.resources.sf_pro_text_medium
+import bodymetrics.composeapp.generated.resources.sf_pro_text_regular
+import org.jetbrains.compose.resources.Font
 
 @Composable
 fun AppTheme(
@@ -26,15 +29,15 @@ fun AppTheme(
     }
     val SfProText = FontFamily(
         Font(
-            resId = R.font.sf_pro_text_regular,
+            Res.font.sf_pro_text_regular,
             weight = FontWeight.Normal
         ),
         Font(
-            resId = R.font.sf_pro_text_medium,
+            Res.font.sf_pro_text_medium,
             weight = FontWeight.Medium
         ),
         Font(
-            resId = R.font.sf_pro_text_bold,
+            Res.font.sf_pro_text_bold,
             weight = FontWeight.Bold
         ),
     )
