@@ -85,24 +85,11 @@ private fun HomeScreen(
         onDismiss = { showBottomSheet = false },
     )
 
-    var showContent by remember { mutableStateOf(false) }
     Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        Button(onClick = { showContent = !showContent }) {
-            Text("Click me!")
-        }
-
         Spacer(modifier = Modifier.size(8.dp))
 
         Button(onClick = { showBottomSheet = true }) {
             Text("Measure Bottom")
-        }
-
-        AnimatedVisibility(showContent) {
-            val greeting = remember { Greeting().greet() }
-            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                Image(painterResource(Res.drawable.compose_multiplatform), null)
-                Text("Compose: $greeting")
-            }
         }
 
         MeasuresGridView(state.selectedMeasuresValues)
